@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RACE™</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap & Jquery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <!-- Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="animate.css" rel="stylesheet" type="text/css" />
+    <link href="magnific-popup.css" rel="stylesheet">
+    <link href="sidemenu.css" rel="stylesheet">
+    <link href="flexslider.css" rel="stylesheet" type="text/css" />
+    <link href="media-queries.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+
+<style>
+
+.white-popup {
+  position: relative;
+  background: url(img/popup-pattern-bottom.png) no-repeat bottom center;
+  background-color: #112a40;
+  background-size: contain;
+	width: auto;
+	max-width: 750px;
+	margin: 25px auto;
+  padding: 25px;
+  padding-top: 45px;
+  padding-bottom: 200px;
+}
+
+.white-popup h3 {color:#d89f2a;}
+.white-popup p {font-size: 14px;}
+
+#subscribe, #proposers-popup, #service-popup  {
+  max-width: 555px !important;
+  padding-bottom: 120px !important;
+}
+
+.mfp-bg {
+	background: #111;
+}
+.mfp-close-btn-in .mfp-close {
+	color: #d89f2a;
+}
+.mfp-close {
+	font-size: 36px;
+}
+
+</style>
+
+<!-- Add sidemenu -->
+<script>
+(function($){
+	// Menu Functions
+	$(document).ready(function(){
+  	$('#menuToggle').click(function(e){
+    	var $parent = $(this).parent('nav');
+      $parent.toggleClass("open");
+      var navState = $parent.hasClass('open') ? "hide" : "show";
+      $(this).attr("title", navState + " navigation");
+			// Set the timeout to the animation length in the CSS.
+			setTimeout(function(){
+				console.log("timeout set");
+				$('#menuToggle > span').toggleClass("navClosed").toggleClass("navOpen");
+			}, 200);
+    	e.preventDefault();
+  	});
+  });
+})(jQuery);
+
+          function closeSidebar(e) {
+            var obj = event.target;
+            var $parent = $('nav');
+            $parent.toggleClass("open");
+            var navState = $parent.hasClass('open') ? "hide" : "show";
+            $(obj).attr("title", navState + " navigation");
+            setTimeout(function () {
+              $('#menuToggle > span').toggleClass("navClosed").toggleClass("navOpen");
+            }, 200);
+          }
+
+   </script>
+
+</head>
+<body>
+  
+<!------------ Navigation start ------------>
+<header>
+  <div class="container">
+    <a href="#home"><div id="logo"><img src="img/logo.png" alt=""></div></a>
+    <ul id="menu">
+      <li><a href="#about">About</a></li>
+      <!--<li><a href="#media">Media</a></li>-->
+      <li><a href="#team">Team</a></li>
+      <li><a href="#proposers">Project Proposers</a></li>
+      <li><a href="#service">Service Providers</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <nav> 
+      <a href="" id="menuToggle" title="show menu"><span class="navClosed"></span></a> 
+      <a href="#about" onclick="closeSidebar(this)">About</a>
+      <!--<a href="#media" onclick="closeSidebar(this)">Media</a>-->
+      <a href="#team" onclick="closeSidebar(this)">Team</a>
+      <a href="#proposers" onclick="closeSidebar(this)">Project Proposers</a>
+      <a href="#service" onclick="closeSidebar(this)">Service Providers</a>
+      <a href="#contact" onclick="closeSidebar(this)">Contact Us</a>
+    </nav>
+  </div>
+</header>
+<!------------ Navigation end ------------>
+
+<!------------ Home start ------------>
+<div id="home">
+  <div class="container">
+    <div id="moving-pattern"></div>
+    <div class="home-wrapper">
+      <img src="img/logo-big.png" class="wow fadeInUp" data-wow-delay="0.6s"alt="">
+      <br>
+      <ul class="home-btn">
+        <li><a href="#subscribe" class="btn wow fadeInUp participate-popup" data-wow-delay="0.9s">participate</a></li>
+        <li><a href="#whitepaper" class="btn blank-btn open-popup-link wow fadeInUp" data-wow-delay="0.9s">whitepaper</a></li>
+      </ul>
+      <br><br><br>
+      <div class="arrow-down wow fadeInUp" data-wow-delay="0.9s"><a href="#about"><img class="vert-move3" src="img/arrow-down.png" alt=""></a></div>
+    </div>
+  </div>
+</div>
+<!------------ Home end ------------>
+
+<!------------ About start ------------>
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 v-pad">
+        <h1 class="wow fadeInLeft" data-wow-delay="0.3s">About</h1>
+      </div>
+      <div class="col-lg-8 col-md-8 v-pad wow fadeInRight" data-wow-delay="0.6s">
+        <h2>RACE™ brings to you the power of the community</h2>
+        <br>
+        <h3>We are building a collaborative digital momentum of moving real estate investments online. We want people to be self-sufficient, to actually be in control of what we want and advance exponentially towards our endeavours.</h3>
+      </div>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 v-pad">
+        <br><br>
+        <h2>Why Tokenize Assets?</h2>
+        <br>
+        <p>Unlock trillions of dollars in traditional illiquid assets. With blockchain-enabled disintermediation, we cut out unnecessary paperwork, middlemen with reduced processing time.</p>
+      </div>
+      <div class="col-lg-4 col-md-6 v-pad">
+        <div class="about-col wow fadeInRight" data-wow-delay="0.3s">
+          <div class="about-icon"><img src="img/icon-1.png" alt=""></div>
+          <div class="about-title">
+            <h3>Faster and Simpler Settlement</h3>
+          </div>
+          <div style="clear:both"></div>
+          <p class="small-font">Digitization and blockchain technology makes the entire dealing process faster and secure. There is less capital lock up, more profits and a bypass across traditional choke points.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 v-pad">
+        <div class="about-col wow fadeInRight" data-wow-delay="0.6s">
+          <div class="about-icon"><img src="img/icon-2.png" alt=""></div>
+          <div class="about-title">
+            <h3>Lower<br>Transactional Fees</h3>
+          </div>
+          <div style="clear:both"></div>
+          <p class="small-font">We significantly reduce cost of transactions that would otherwise hinder or discourage change of ownership and profit reduction.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 v-pad">
+        <div class="about-col wow fadeInLeft" data-wow-delay="0.3s">
+          <div class="about-icon"><img src="img/icon-3.png" alt=""></div>
+          <div class="about-title">
+            <h3>Fractionalisation</h3>
+          </div>
+          <div style="clear:both"></div>
+          <p class="small-font">Access to institutional grade products that often carry higher return on investment is now made available at a lower price to entry.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 v-pad">
+        <div class="about-col wow fadeInUp" data-wow-delay="0.3s">
+          <div class="about-icon"><img src="img/icon-4.png" alt=""></div>
+          <div class="about-title">
+            <h3>Higher<br>Liquidity</h3>
+          </div>
+          <div style="clear:both"></div>
+          <p class="small-font">Assets at a fraction of the initial cost and commitment plus a constantly open market mean increased affordability, driving token trading volume.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 v-pad">
+        <div class="about-col wow fadeInRight" data-wow-delay="0.3s">
+          <div class="about-icon"><img src="img/icon-5.png" alt=""></div>
+          <div class="about-title">
+            <h3>Transparent and Anti-Fraud System</h3>
+          </div>
+          <div style="clear:both"></div>
+          <p class="small-font">Falsify transparent transaction information on the blockchain is virtually impossible.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!------------ About end ------------>
+<section class="features" style="padding-top:0px; padding-bottom: 0px;">
+  <div class="container">
+    <h1>Platform Features</h1>
+    <br><br>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6 v-pad wow fadeInUp" data-wow-delay="0.3s">
+        <img src="img/feature-1.png" alt="">
+        <br><br>
+        <h3>Asset Tokenization and Issuance</h3>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 v-pad wow fadeInUp" data-wow-delay="0.6s">
+        <img src="img/feature-2.png" alt="">
+        <br><br>
+        <h3>Asset Management</h3>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 v-pad wow fadeInUp" data-wow-delay="0.9s">
+        <img src="img/feature-3.png" alt="">
+        <br><br>
+        <h3>RACE™ Token Asset Exchange</h3>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 v-pad wow fadeInUp" data-wow-delay="1.2s">
+        <img src="img/feature-4.png" alt="">
+        <br><br>
+        <h3>Asset Trading</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!------------ Media start ------------>
+<section id="media">
+  <div class="container">
+    <!--<div class="flex-container wow fadeInUp" data-wow-delay="0.3s">
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <div class="row">
+              <div class="col-lg-7 col-md-7 col-sm-12 v-pad">
+                <div class="media-video"><img src="img/video-thumb.jpg" alt=""></div>
+                <div style="clear:both;"></div>
+              </div>
+              <div class="col-lg-5 col-md-5 col-sm-12 v-pad">
+                <div class="media-title"><h2>Lorem Ipsum Dolor Sit Amet Consectetur</h2></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-lg-7 col-md-7 col-sm-12 v-pad">
+                <div class="media-video"><img src="img/video-thumb.jpg" alt=""></div>
+                <div style="clear:both;"></div>
+              </div>
+              <div class="col-lg-5 col-md-5 col-sm-12 v-pad">
+                <div class="media-title"><h2>Lorem Ipsum Dolor Sit Amet Consectetur</h2></div>  
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>  
+    <br><br><br><br>
+    <h3 class="featured-text" style="text-align:center;">Featured On</h3>
+    <br>
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="0.3s">
+        <img src="img/media-logo.jpg" alt="">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="0.6s">
+        <img src="img/media-logo.jpg" alt="">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="0.9s">
+        <img src="img/media-logo.jpg" alt="">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="1.2s">
+        <img src="img/media-logo.jpg" alt="">
+      </div>
+    </div>
+    <br><br><br>-->
+    <div class="mailing-list wow fadeInUp" data-wow-delay="0.3s"><a href="#subscribe" class="btn open-popup-link">Subscribe to our mailing list</a></div>
+  </div>
+</section>
+<!------------ Media end ------------>
+
+<!------------ Tokensale start ------------>
+<section class="tokensale">
+  <div class="container">
+    <h1 style="text-align: center;">Tokensale</h1>
+    <br><br>
+    <div class="tokensale-table wow fadeInUp" data-wow-delay="0.3s">
+      <table>
+        <tr valign="top">
+          <td>Token</td>
+          <td>RACE™ Tokens (RACE™)</td>
+        </tr>
+        <tr valign="top">
+          <td>Total Supply</td>
+          <td>620,000,000 RACE™</td>
+        </tr>
+        <tr valign="top">
+          <td>Tokens for Sale</td>
+          <td>310,000,000 RACE™ (50%)</td>
+        </tr>
+        <tr valign="top">
+          <td>Reserved Tokens</td>
+          <td>310,000,000 RACE™ (50%)</td>
+        </tr>
+        <tr valign="top">
+          <td>Token Price</td>
+          <td>USD $0.0625</td>
+        </tr>
+        <tr valign="top">
+          <td>Hard Cap</td>
+          <td>USD $15,430,000<br>($19.375M public figure)</td>
+        </tr>
+        <tr valign="top">
+          <td>Currencies Accepted</td>
+          <td>USD, ETH</td>
+        </tr>
+        <tr valign="top">
+          <td>Min. Purchase</td>
+          <td>8000 RACE™ (~USD$500)</td>
+        </tr>
+        <tr valign="top">
+          <td>Pre-sale Date</td>
+          <td></td>
+        </tr>
+        <tr valign="top">
+          <td>Pre-sale Bonus</td>
+          <td>10%</td>
+        </tr>
+        <tr valign="top">
+          <td>Public Sale Date</td>
+          <td></td>
+        </tr>
+        <tr valign="top">
+          <td>Countries Restricted</td>
+          <td>USA, China</td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <p class="small-font" style="font-style: italic; text-align: center;">The RACE™ Token is not available for purchase by US citizens or a United States person. <br>Please see <a href="#disclaimer" class="orange-text open-popup-link">Legal Disclaimer</a> for more.</p>
+  </div>
+  <div class="coin-left wow fadeInUp" data-wow-delay="0.6s"><img src="img/coin-left.png" class="vert-move" alt=""></div>
+  <div class="coin-right wow fadeInUp" data-wow-delay="0.6s"><img src="img/coin-right.png" class="vert-move2" alt=""></div>
+</section>
+<!------------ Tokensale end ------------>
+
+<!------------ Roadmap start ------------>
+<section id="roadmap">
+  <div class="container">
+    <!--<div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12 v-pad">
+        <div class="roadmap-title"><img src="img/text-roadmap.png" alt=""></div>
+        <div class="roadmap-title-s wow fadeInUp" data-wow-delay="0.3s"><h3>Roadmap</h3></div>
+      </div> 
+      <div class="col-lg-8 col-md-8 col-sm-12 v-pad building-pad wow fadeInUp" data-wow-delay="0.3s">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-3 v-pad roadmap-building wow fadeInUp" data-wow-delay="0.6s">
+            <img src="img/roadmap-building.png" alt="">
+          </div> 
+          <div class="col-lg-9 col-md-9 col-sm-9 col-9 v-pad roadmap-info wow fadeInRight" data-wow-delay="0.6s">
+            <h2>2018</h2>
+            <table>
+              <tr valign="top">
+                <td>Q4</td>
+                <td>Smart Contract Development for RACE™ Token and Asset Tokens, Technical Architecture Design</td>
+              </tr>
+            </table>
+          </div> 
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-3 v-pad roadmap-building wow fadeInUp" data-wow-delay="0.6s">
+            <img src="img/roadmap-building.png" alt="">
+          </div> 
+          <div class="col-lg-9 col-md-9 col-sm-9 col-9 v-pad roadmap-info wow fadeInRight" data-wow-delay="0.6s">
+            <h2>2019</h2>
+            <table>
+              <tr valign="top">
+                <td>Q1</td>
+                <td>Private Sale</td>
+              </tr>
+              <tr valign="top">
+                <td>Q2</td>
+                <td>Public Sale</td>
+              </tr>
+              <tr valign="top">
+                <td>Q3</td>
+                <td>Platform Closed Beta testing for stakeholders, first project on RACE™ Platform</td>
+              </tr>
+              <tr valign="top">
+                <td>Q4</td>
+                <td>UI / UX Overhaul, onboard more stakeholders / partnerships, Asset Token Exchange  Development</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-3 v-pad roadmap-building wow fadeInUp" data-wow-delay="0.6s">
+            <img src="img/roadmap-building.png" alt="">
+          </div> 
+          <div class="col-lg-9 col-md-9 col-sm-9 col-9 v-pad roadmap-info wow fadeInRight" data-wow-delay="0.6s">
+            <h2>2020</h2>
+            <table>
+              <tr valign="top">
+                <td>Q1</td>
+                <td>Open Beta for RACE™ Platform and RACE™ Asset Token Exchange</td>
+              </tr>
+              <tr valign="top">
+                <td>Q2</td>
+                <td>Asset Token sale and trading on RACE™ Asset Token Exchange</td>
+              </tr>
+              <tr valign="top">
+                <td>Q3</td>
+                <td>Mobile App Version Live </td>
+              </tr>
+              <tr valign="top">
+                <td>Q4</td>
+                <td>Live RACE™ Platform and RACE™ Asset Token Exchange</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-3 v-pad roadmap-building wow fadeInUp" data-wow-delay="0.6s">
+            <img src="img/roadmap-building.png" alt="">
+          </div> 
+          <div class="col-lg-9 col-md-9 col-sm-9 col-9 v-pad roadmap-info wow fadeInRight" data-wow-delay="0.6s">
+            <h2>2021</h2>
+            <table>
+              <tr valign="top">
+                <td>Q1</td>
+                <td>Automated reporting / tax filing services</td>
+              </tr>
+              <tr valign="top">
+                <td>Q2</td>
+                <td>Setup RACE™ Careers</td>
+              </tr>
+              <tr valign="top">
+                <td>Q3</td>
+                <td>Onboarding foreign asset tokens</td>
+              </tr>
+              <tr valign="top">
+                <td>Q4</td>
+                <td>Explore alternative class tokens and setting up RACE™ Labs</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <h1 class="featured-text" style="text-align:center; opacity: 1; font-weight: 300;">Roadmap</h1>
+    <br><br>
+    <div class="row" style="text-align:center;">
+      <div class="col-lg-6 col-md-6 col-6 v-pad">
+        <h3 class="featured-text">RACE™ TOKEN</h3>
+      </div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad">
+        <h3 class="featured-text">ASSET TOKEN</h3>
+      </div>
+    </div>
+    <br><br><br>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad" style="padding-top:0px;">
+        <div class="row flex-column-reverse flex-sm-row">
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info wow fadeInLeft" data-wow-delay="0.3s" style="text-align:right;">
+            <h2>Q1 - 2019</h2>
+            <br>
+            <p>RACE™ Conceptualisation and Whitepaper completed</p>
+            <br>
+            <p>Seed Funded</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-l">
+            <div class="line-l"></div>
+            <div class="roadmap-square"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line" style="padding-top:0px;"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad" style="padding-top:0px;">
+        <div class="row flex-column-reverse flex-sm-row">
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info  wow fadeInLeft" data-wow-delay="0.3s" style="text-align:right;">
+            <h2>Q2 - 2019</h2>
+            <br>
+            <p>Provisional Patent Filed</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-l">
+            <div class="line-l"></div>
+            <div class="roadmap-square"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line" style="padding-top:0px;"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad" style="padding-top:0px;">
+        <div class="row flex-column-reverse flex-sm-row">
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info  wow fadeInLeft" data-wow-delay="0.3s" style="text-align:right;">
+            <h2>Q3 - 2019</h2>
+            <br>
+            <p>Private Sale of RACE™ Tokens</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-l">
+            <div class="line-l"></div>
+            <div class="roadmap-square"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line" style="padding-top:0px;"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad" style="padding-top:0px;">
+        <div class="row flex-column-reverse flex-sm-row">
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info  wow fadeInLeft" data-wow-delay="0.3s" style="text-align:right;">
+            <h2>Q4 - 2019</h2>
+            <br>
+            <p>Public Sale of RACE™ Tokens</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-l">
+            <div class="line-l"></div>
+            <div class="roadmap-square"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line" style="padding-top:0px;"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad"></div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line">
+        <div class="row">
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-r">
+            <div class="line-r"></div>
+            <div class="roadmap-square"></div>
+          </div>
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info  wow fadeInRight" data-wow-delay="0.3s">
+            <h2>Q4 - 2019<br>to Q1 - 2020</h2>
+            <br>
+            <p>Regulatory submission and approval of Digitised Asset platform (Singapore)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad" style="padding-top:0px;">
+        <div class="row flex-column-reverse flex-sm-row">
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info  wow fadeInLeft" data-wow-delay="0.3s" style="text-align:right;">
+            <h2>Q1 - 2020</h2>
+            <br>
+            <p>Onboard Project Proposers</p>
+            <br>
+            <p>UI & UX Version 1</p>
+            <br>
+            <p>Platform Closed for Beta Testing for Stakeholders</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-l">
+            <div class="line-l"></div>
+            <div class="roadmap-square"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line" style="padding-top:0px;"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad" style="padding-top:0px;">
+        <div class="row flex-column-reverse flex-sm-row">
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info wow fadeInLeft" data-wow-delay="0.3s" style="text-align:right;">
+            <h2>Q2 - 2020</h2>
+            <br>
+            <p>Asset Token Exchange Development</p>
+            <br>
+            <p>Onboard More Stake Holders and Foster Partnerships With Service Providers</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-l">
+            <div class="line-l"></div>
+            <div class="roadmap-square"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line" style="padding-top:0px;"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad"></div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line">
+        <div class="row">
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-r">
+            <div class="line-r"></div>
+            <div class="roadmap-square"></div>
+          </div>
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info  wow fadeInRight" data-wow-delay="0.3s">
+            <h2>Q2 - 2020</h2>
+            <br>
+            <p>First Pilot Asset On Boarded On The RACE™ Platform As A Security Token</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad" style="padding-top:0px;">
+        <div class="row flex-column-reverse flex-sm-row">
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info  wow fadeInLeft" data-wow-delay="0.3s" style="text-align:right;">
+            <h2>Q3 - 2020</h2>
+            <br>
+            <p>Launch Beta Test Net for RACE™ Platform</p>
+            <br>
+            <p>Mobile APP version Live</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-l">
+            <div class="line-l"></div>
+            <div class="roadmap-square"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line" style="padding-top:0px;"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad"></div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line">
+        <div class="row">
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-r">
+            <div class="line-r"></div>
+            <div class="roadmap-square"></div>
+          </div>
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info  wow fadeInRight" data-wow-delay="0.3s">
+            <h2>Q3 - 2020</h2>
+            <br>
+            <p>Second Asset On Boarded On The RACE™ Platform As A Security Token</p>
+            <br>
+            <p>Launch Beta Test Net for RACE™ Asset Token Exchange</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad"></div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line">
+        <div class="row">
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-r">
+            <div class="line-r"></div>
+            <div class="roadmap-square"></div>
+          </div>
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info  wow fadeInRight" data-wow-delay="0.3s">
+            <h2>Q4 - 2020</h2>
+            <br>
+            <p>Asset Token Secondary Sale and Trading (on RACE™ Token Exchange or Third Party Security Token Exchange)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad" style="padding-top:0px;">
+        <div class="row flex-column-reverse flex-sm-row">
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info  wow fadeInLeft" data-wow-delay="0.3s" style="text-align:right;">
+            <h2>Q1 - 2021</h2>
+            <br>
+            <p>Live RACE™ platform and RACE™ Asset Token Exchange</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-l">
+            <div class="line-l"></div>
+            <div class="roadmap-square"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line" style="padding-top:0px;"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad" style="padding-top:0px;">
+        <div class="row flex-column-reverse flex-sm-row">
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info  wow fadeInLeft" data-wow-delay="0.3s" style="text-align:right;">
+            <h2>Q2 - 2021</h2>
+            <br>
+            <p>Automated Reporting & Tax Filing Services</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-l">
+            <div class="line-l"></div>
+            <div class="roadmap-square"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line" style="padding-top:0px;"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad" style="padding-top:0px;">
+        <div class="row flex-column-reverse flex-sm-row">
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info  wow fadeInLeft" data-wow-delay="0.3s" style="text-align:right;">
+            <h2>Q3 - 2021</h2>
+            <br>
+            <p>Launch Main Net</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-l">
+            <div class="line-l"></div>
+            <div class="roadmap-square"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line" style="padding-top:0px;"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad" style="padding-top:0px;">
+        <div class="row flex-column-reverse flex-sm-row">
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info wow fadeInLeft" data-wow-delay="0.3s" style="text-align:right;">
+            <h2>Q1 - 2022</h2>
+            <br>
+            <p>RACE™ Academy</p>
+            <br>
+            <p>RACE™ Labs</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-l">
+            <div class="line-l"></div>
+            <div class="roadmap-square"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line" style="padding-top:0px;"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad"></div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line">
+        <div class="row">
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-r">
+            <div class="line-r"></div>
+            <div class="roadmap-square"></div>
+          </div>
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info  wow fadeInRight" data-wow-delay="0.3s">
+            <h2>Q1 - 2022</h2>
+            <br>
+            <p>Onboarding Asset Tokens On New International Locations</p>
+            <br>
+            <p>Exploring Alternative Class Asset Tokens - Like Solar Parks</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad" style="padding-top:0px;">
+        <div class="row flex-column-reverse flex-sm-row">
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info  wow fadeInLeft" data-wow-delay="0.3s" style="text-align:right;">
+            <h2>Q2 - 2022</h2>
+            <br>
+            <p>RACE™ Careers</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-l">
+            <div class="line-l"></div>
+            <div class="roadmap-square"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line" style="padding-top:0px;"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-6 v-pad" style="padding-top:0px;">
+        <div class="row flex-column-reverse flex-sm-row">
+          <div class="col-lg-10 col-md-9 col-sm-9 col-12 v-pad roadmap-info  wow fadeInLeft" data-wow-delay="0.3s" style="text-align:right;">
+            <h2>Q3 - 2022</h2>
+            <br>
+            <p>RACE™ Asset Incubator</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 col-12 v-pad branch-l">
+            <div class="line-l"></div>
+            <div class="roadmap-square"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-6 v-pad v-line" style="padding-top:0px;"></div>
+    </div>
+  </div>
+</section>
+<!------------ Roadmap end ------------>
+
+<!------------ Team start ------------>
+<section id="team">
+  <div class="container">
+    <h1>Team</h1>
+    <br><br>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="0.3s">
+        <a href="#suresh" class="open-popup-link">
+          <div class="team-circle">
+            <div class="team-image"><img src="img/team/team-suresh.jpg" alt=""></div>
+          </div>
+        </a>
+        <h3>Suresh Nichani &nbsp;<a href="https://www.linkedin.com/in/nichani/" target="_blank"><i class="fab fa-linkedin gold-text"></i></a></h3>
+      </div> 
+      <div class="col-lg-3 col-md-6 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="0.3s">
+        <a href="#shankar" class="open-popup-link">
+          <div class="team-circle">
+            <div class="team-image"><img src="img/team/team-shankar-iyer.jpg" alt=""></div>
+          </div>
+        </a>
+        <h3>Shankar Iyer &nbsp;<a href="https://www.linkedin.com/in/viteosceo/" target="_blank"><i class="fab fa-linkedin gold-text"></i></a></h3>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="0.3s">
+        <a href="#david" class="open-popup-link">
+          <div class="team-circle">
+            <div class="team-image"><img src="img/team/team-david.jpg" alt=""></div>
+          </div>
+        </a>
+        <h3>David Lynd &nbsp;<a href="https://www.linkedin.com/in/adam-david-lynd-85b569101/" target="_blank"><i class="fab fa-linkedin gold-text"></i></a></h3>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="0.3s">
+        <a href="#suzanne" class="open-popup-link">
+          <div class="team-circle">
+            <div class="team-image"><img src="img/team/team-suzanne.jpg" alt=""></div>
+          </div>
+        </a>
+        <h3>Suzanne Jones &nbsp;<a href="https://www.linkedin.com/in/suzanne-jones-29770bb/" target="_blank"><i class="fab fa-linkedin gold-text"></i></a></h3>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="0.3s">
+        <a href="#alan" class="open-popup-link">
+          <div class="team-circle">
+            <div class="team-image"><img src="img/team/team-alan-bell.jpg" alt=""></div>
+          </div>
+        </a>
+        <h3>Alan Bell &nbsp;<a href="https://www.linkedin.com/in/alan-bell-56885112/" target="_blank"><i class="fab fa-linkedin gold-text"></i></a></h3>
+        <!--<p class="small-font">Chief Executive Officer</p>-->
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="0.3s">
+        <a href="#sampat" class="open-popup-link">
+          <div class="team-circle">
+            <div class="team-image"><img src="img/team/team-dr-sampat-shivangi.jpg" alt=""></div>
+          </div>
+        </a>
+        <h3>Dr. Sampat Shivangi &nbsp;<a href="https://www.linkedin.com/in/dr-sampat-shivangi-a67b646/" target="_blank"><i class="fab fa-linkedin gold-text"></i></a></h3>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="0.3s">
+        <a href="#binod" class="open-popup-link">
+          <div class="team-circle">
+            <div class="team-image"><img src="img/team/team-dr-binod-k-sinha.jpg" alt=""></div>
+          </div>
+        </a>
+        <h3>Dr. Binod K. Sinha &nbsp;<a href="https://www.linkedin.com/in/binod-k-sinha-05472b9/" target="_blank"><i class="fab fa-linkedin gold-text"></i></a></h3>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="0.3s">
+        <a href="#hari" class="open-popup-link">
+          <div class="team-circle">
+            <div class="team-image"><img src="img/team/team-hari-eppanapally.jpg" alt=""></div>
+          </div>
+        </a>
+        <h3>Hari Eppanapally &nbsp;<i class="fab fa-linkedin gold-text"></i></h3>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="0.3s">
+        <a href="#michael" class="open-popup-link">
+          <div class="team-circle">
+            <div class="team-image"><img src="img/team/team-michael.jpg" alt=""></div>
+          </div>
+        </a>
+        <h3>Michael Cordone &nbsp;<a href="https://www.linkedin.com/in/michaelcordone/" target="_blank"><i class="fab fa-linkedin gold-text"></i></a></h3>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="0.3s">
+        <a href="#nir" class="open-popup-link">
+          <div class="team-circle">
+            <div class="team-image"><img src="img/team/team-nir-goldberg.jpg" alt=""></div>
+          </div>
+        </a>
+        <h3>Nir Goldberg &nbsp;<a href="https://www.linkedin.com/in/nir-goldberg-392ab41/" target="_blank"><i class="fab fa-linkedin gold-text"></i></a></h3>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="0.3s">
+        <a href="#sreenivas" class="open-popup-link">
+          <div class="team-circle">
+            <div class="team-image"><img src="img/team/team-sreenivas-tanikella.jpg" alt=""></div>
+          </div>
+        </a>
+        <h3>Sreenivas Tanikella &nbsp;<i class="fab fa-linkedin gold-text"></i></h3>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="0.3s">
+        <a href="#vince" class="open-popup-link">
+          <div class="team-circle">
+            <div class="team-image"><img src="img/team/team-vince.jpg" alt=""></div>
+          </div>
+        </a>
+        <h3>Vince Meens &nbsp;<a href="https://www.linkedin.com/in/vincemeens/" target="_blank"><i class="fab fa-linkedin gold-text"></i></a></h3>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-6 v-pad wow fadeInUp" data-wow-delay="0.3s">
+        <a href="#krisanth" class="open-popup-link">
+          <div class="team-circle">
+            <div class="team-image"><img src="img/team/team-krisanth-sivarajh.jpg" alt=""></div>
+          </div>
+        </a>
+        <h3>Krisanth Sivarajh &nbsp;<a href="https://www.linkedin.com/in/krisanth-sivarajh/" target="_blank"><i class="fab fa-linkedin gold-text"></i></a></h3>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!------------ Team end ------------>
+
+<!------------ Proposer & service providers start ------------>
+<section id="proposers">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 v-pad" style="text-align:center;">
+        <img src="img/img-proposers.png" alt="">
+      </div>
+      <div class="col-lg-6 v-pad">
+        <h1>Project Proposers</h1>
+        <br>
+        <h2>Do you have an asset to propose or issue?</h2>
+        <br>
+        <p>Learn how you can tokenize your asset with us and make a breakthrough for yourself today.</p>
+        <br>
+        <a href="#proposers-popup" class="btn open-popup-link">Register Now</a>
+      </div>
+    </div>
+  </div>
+  <section id="service">
+    <div class="container">
+      <div class="service-col" style="text-align:center;">
+        <img src="img/img-serviceproviders.png" alt="">
+      </div>
+      <div class="service-col">
+        <h1>Service Providers</h1>
+        <br>
+        <h2>Put your service and skills to practice where they are properly valued</h2>
+        <br>
+        <p>Find out how you can be a part of our RACE™ family and join our growing network of Managers, Auditors, Accountants, Brokers, Custodians and many more.</p>
+        <br>
+        <a href="#service-popup" class="btn open-popup-link">Join Now</a>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </section>
+</section>
+<!------------ Proposer & service providers start ------------>
+
+<!------------ Contact start ------------>
+<section id="contact">
+  <div class="container" style="position:relative;" data-wow-delay="0.3s">
+    <div class="contact-wrapper wow fadeInUp">
+      <img src="img/logo-bottom.png" alt="">
+      <br><br><br>
+      <h2><a href="mailto:">inquiries@racetoken.io</a></h2>
+      <br>
+      <h3 class="orange-text">+65 xxxx xxxx</h3>
+      <br><br>
+      <ul class="social">
+        <li><a href="" class="social-links"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://twitter.com/RACEToken" class="social-links"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="" class="social-links"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://medium.com/@RACEToken" class="social-links"><i class="fab fa-medium-m"></i></a></li>
+        <li><a href="" class="social-links"><i class="fab fa-btc"></i></a></li>
+        <li><a href="https://t.me/RACEToken" class="social-links"><i class="fab fa-telegram-plane"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    <div class="copyright-text"> <p class="small-font">© 2019 RACE™. All rights reserved. <a href="terms.html" class="orange-text" target="_blank">Terms & Conditions</a>  |  <a href="privacy-notice.html" class="orange-text" target="_blank">Privacy Policy</a></p></div>
+    <br>
+    <p class="small-font" style="font-size:11px; font-style: italic;">The content disclosed herein is proprietary and a U.S patent is applied for. The use/exploitation of the content could amount to infringement of the rights of the applicant.</p>
+  </div>
+</section>
+<!------------ Contact end ------------>
+
+
+<!---------- Team Popup ------------> 
+<div id="team-popup" class="white-popup mfp-hide sans">
+  <h2>Name Here</h2>
+  <h3>Chief Executive Officer</h3>  
+  <br><br>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus, augue quis facilisis sagittis, ipsum augue pulvinar tellus, a vehicula eros purus a sem. Vivamus finibus purus elit, a imperdiet felis convallis at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Sed id facilisis massa. Ut lectus est, venenatis auctor felis ut, bibendum mattis est. Aliquam efficitur varius enim ut lacinia.</p>  
+  <br>
+  <p>Proin ut aliquam mauris, ut lacinia mi. Integer ullamcorper, est vel congue bibendum, dolor lectus iaculis nisi, non tincidunt neque odio vel augue. Morbi sagittis sit amet nibh at faucibus. Nunc iaculis maximus ex, vitae pulvinar ex faucibus at. Vivamus mollis lorem nec euismod porta. Vestibulum sodales vestibulum ante, sed accumsan mauris facilisis in. Etiam ut rutrum lectus, ut lacinia nisl. Fusce sed turpis nec est eleifend tempor.</p>
+</div>
+
+<div id="suresh" class="white-popup mfp-hide sans">
+  <h2>Suresh Nichani</h2>
+  <!--<h3>Chief Executive Officer</h3>-->
+  <br><br>
+  <p>Nichani is CEO of RootCorp and Director of Nichani Investments, which is a part of the Nichani Group, a 70-year-old organization with holdings in Real Estate, Information Technology, Equities, and Motion Picture finance and distribution. Nichani graduated from the Owner/ President Management Program at the Harvard Business School and holds an M.S. in computer science from the University of Cincinnati. He founded Exinom Technologies, one of the leading systems integrators of business intelligence and data analysis solutions in the Northeastern United States. As President and CEO, Nichani led his technology company to be named by INC Magazine in the INC 500 List as one of the fastest growing companies in North America for two consecutive years in 2001 and 2002. Exinom Technologies was subsequently acquired by NEC Solutions America to merge with Niteo Partners, of which Nichani was named Chief Operating Officer. Since then, Nichani has led a number of real estate acquisitions with a focus on residential, commercial, and land properties in the United States and India.</p>
+</div>
+
+<div id="vince" class="white-popup mfp-hide sans">
+  <h2>Vince Meens</h2>
+  <!--<h3>Chief Executive Officer</h3>-->
+  <br><br>
+  <p>Meens is a passionate technologist, self-taught by trial & error, turned international (mostly Europe-based) entrepreneur. He has over 15 years of experience in developing and operating internet and, in the past few years, blockchain platforms serving millions of people. These include the search and dynamic packaging industries, and yield management engines for the travel/mobility industry.</p>
+  <br>
+  <p>Meens founded and managed a niche subscription-based airline in Europe, one of the biggest cryptocurrency token brokers in Europe, and more recently founded and is developing a crowd operated public transportation alternative with open-source hardware autonomous pods in addition to an ARG (Alternate Reality Game). He also led and managed the entrepreneurship and innovation programs for one of the biggest public-private, incubator-accelerator ecosystems in the Netherlands, focused on blockchain and AI.</p>
+  <br>
+  <p>An organiser, sponsor and volunteer for many community driven events around entrepreneurship and technology, as well as consultant to aspiring or junior founders, Meens is a proliferative public speaker in over 300 events worldwide, sharing narratives of where technology can take us.</p>
+</div>
+
+<div id="krisanth" class="white-popup mfp-hide sans">
+  <h2>Krisanth Sivarajh</h2>
+  <!--<h3>Chief Executive Officer</h3>-->
+  <br><br>
+  <p>Krisanth Sivarajh, a Master’s graduate from New York University joined RealAssets’s team as the Project Manager. Sivarajh has an outstanding track record of achievement directly to his ability to provide oversight and leadership, create strategies, plans, operational concepts and initiatives, and direct and coordinate multi-faceted functions. Sivarajh has had repeated success revitalizing operations and establishing highly productive environments through business operation improvement projects. Sivarajh has worked as an Operations Lead at New York University, and as an Analyst at Amazon.</p>
+</div>
+
+<div id="shankar" class="white-popup mfp-hide sans">
+  <h2>Shankar Iyer</h2>
+  <!--<h3>Chief Executive Officer</h3>-->
+  <br><br>
+  <p>Iyer is an experienced entrepreneur who has founded, built and led multiple global companies in the technology, financial services, real estate and hospitality segments. Over his three decades of experience as an entrepreneur, Iyer has consistently led his companies to high profits, exceptional liquidity and successful IPOs. As the founder of VITEOS, he built an asset management company that combines advanced technology and consultative client services to create a leader in hedge fund and private fund servicing. VITEOS’ offering provides the scalability and flexibility funds need to add clients, gather new assets, develop winning strategies and enter new markets. VITEOS was recently acquired by Intertrust in the Netherlands for about $300 Million. Prior to founding VITEOS, Iyer was the CEO & President of Silverline, a $120 Million technology company he successfully guided from start-up to public offering. Silverline was the first Indian IT company to be listed on the NYSE. Iyer has both a Bachelor’s degree in science and solid state electronics and a Master’s in Business from the University of Mumbai and is residing in New York City at present.</p>
+</div>
+
+<div id="david" class="white-popup mfp-hide sans">
+  <h2>David Lynd</h2>
+  <!--<h3>Chief Executive Officer</h3>-->
+  <br><br>
+  <p>Lynd received his Bachelors in Administration from Southern Methodist University and holds a CPM designation from the Institute of Real Estate Management, as well as the CAPS designation from the National Apartment Association. As co-founder of acquisition company Lynd Residential Properties, he has led joint ventures into both commercial management and the hospitality sector. In 2009, the BC LYND Company was established. As one of its founders, Lynd created a hospitality group which currently operates 12 luxury hotels. He also co-founded LYND Development Partners who earned the prestigious “High-Rise of the Year” award from Multifamily Executive for their development project EnV in Chicago.</p>
+  <br>
+  <p>In his new role as CEO for LYND Opportunity Partners in 2016, Lynd leads a very skilled investment team that searches for and invests in opportunistic real estate transactions throughout the United States. LYND Opportunity Partners also serves as the investment advisor to American Veterans Housing Corp. This is a non-profit organization that focuses on providing Veterans with affordable housing. In addition to his role as CEO, Lynd has committed 19 years to his real estate career. He has a vast understanding of all operational tasks needed to manage and operate real estate successfully.
+  </p>
+</div>
+
+<div id="suzanne" class="white-popup mfp-hide sans">
+  <h2>Suzanne Jones</h2>
+  <!--<h3>Chief Executive Officer</h3>-->
+  <br><br>
+  <p>Jones joined NorthMarq in 2008 and specializes in the origination of Debt, Joint Venture and Structured Finance. She is the recipient of NorthMarq's Associate Producer of the Year Award in 2014 and has served on the Producers Council every year since, an appointment reserved for Producers in the top 10%, company-wide. In November 2015, she was named Real Estate Forum's Women of Influence in the Southwest. Jones has over 19 years of domestic and international commercial real estate finance experience. She was involved in the financial underwriting of the World Trade Center in New York for GMACCM in 2001. Jones has underwritten over $1.4 billion in conduit loans for properties in Europe and over $2.5 billion in debt and equity in the United States. Jones is a founding member of Real Estate Network Empowering Women (RENEW) Inc., a new commercial real estate finance organization targeting women in finance with more than 250 members located in 16 states. She continues to serve on the board for RENEW and is also a member of The Real Estate Council.</p>
+</div>
+
+<div id="hari" class="white-popup mfp-hide sans">
+  <h2>Harikishan Eppanapally</h2>
+  <!--<h3>Chief Executive Officer</h3>-->
+  <br><br>
+  <p>Eppanapally is a financial services professional, an entrepreneur and a philanthropist with a passion for education, healthcare and the environment. His lifelong mission has been to transform and establish a peaceful society for harmonious living. With over 30 years of diverse experience and as a financial services professional, Eppanapally has been involved in directing and managing major high visibility, global initiatives in the financial services industry. He is an entrepreneur and invested in several disruptive technology companies. He is a visionary, passionate about giving back to the society, founder of few NGOs and serves on several boards.</p>
+</div>
+
+<div id="alan" class="white-popup mfp-hide sans">
+  <h2>Alan Bell</h2>
+  <!--<h3>Chief Executive Officer</h3>-->
+  <br><br>
+  <p>Bell has been active in the Residential and Mixed Use Property and Hospitality Development sector for 27 years, and his professional experience now covers a wide range of activities, including project development management, transactions, sales & marketing, market research, feasibility analysis, real estate project finance appraisals, conducting due diligence on potential new projects and strategic master planning consulting. Over the past 15 years whilst based in London, Bell has been involved in large-scale projects internationally, covering Montenegro, the Caribbean, Spain, France, Dubaim Argentina and India.</p>
+</div>
+
+<div id="sampat" class="white-popup mfp-hide sans">
+  <h2>Dr. Sampat Shivangi</h2>
+  <!--<h3>Chief Executive Officer</h3>-->
+  <br><br>
+  <p>Dr. Shivangi is an Indian born American Physician, and president of Indian American Forum for Political education. He has been serving the Board for the Department of Mental Health in Mississippi for several years, and served as the Advisor to the US Secretary of Health and Human Services from 2005 to 2008. Dr. Shivangi has been honored for his role as adviser to the United States Department of Health and Human Services in the George W. Bush administration and chairmanship of Mississippi State Board of Mental Health. Dr. Shivangi also served as a house delegate in American Medical Association Chicago, IL.</p>
+  <br>
+  <p>Dr. Sampat Shivangi was awarded one of the highest civilian honor, Pravasi Bharatiya Diwas Sanman award for the year of 2016 on January 9, 2017 in Bengaluru, by the Hon.President of India, Shri Pranab Mukherjee. He was also awarded an Ellis Island medal of Honor in New York in 2008. Dr. Sampat Shivangi completed his Doctor of Medicine (MD) in Ob-Gyn and moved to the United States in 1976. Later, he completed a fellowship from Washington University School of Medicine, St. Louis, Missouri. He is the founding president of the American Association of Physicians of Indian origin in Mississippi and is the past president and chair of the India Association of Mississippi. He earlier served on the Mississippi State Board of Health. He joined Executive Advisory Board of the Washington, DC-based think tank International Leaders Summit.</p>
+  <br>
+  <p>He is involved in many philanthropic activities serving with Blind foundation of Mississippi, Diabetic, Cancer and Heart Associations of America. Dr. Shivangi has number of philanthropic work in India including Primary & middle schools, Cuturral Center, IMA Centers that he opened and he brought the first ever US Congressional grant to AAPI to study Diabetes Mellitus amongst Indian Americans.</p>
+</div>
+
+<div id="binod" class="white-popup mfp-hide sans">
+  <h2>Dr. Binod K. Sinha</h2>
+  <!--<h3>Chief Executive Officer</h3>-->
+  <br><br>
+  <p>Dr. Sinha, MD is a board-certified urologist in Edison, New Jersey. He is the president of the New Jersey Chapter of American Association of Physicians of Indian Origin. He is affiliated with Saint Peter's University Hospital, Robert Wood Johnson University Hospital, and University Medical Center of Princeton at Plainsboro. He received his medical degree from Patna Medical College and has been in practice for more than 20 years.</p>
+</div>
+
+<div id="michael" class="white-popup mfp-hide sans">
+  <h2>Michael Cordone</h2>
+  <!--<h3>Chief Executive Officer</h3>-->
+  <br><br>
+  <p>Cordone is the current owner and co-founder of GoldCor Capital Partners, a boutique real estate investment corporation focused solely on the investment in operationally mismanaged value-add multi-family assets. With 10 years of real estate investment and management experience, he has overseen acquisitions, due-diligence, operations, and dispositions across multiple asset types. Cordone is responsible for strategically executing business plans for over 80+ properties, 21K+ multi-family units, $2B+ in value, spread throughout Texas, Arizona, Tennessee, Alabama, Georgia, North Carolina, South Carolina, and Florida. Additionally, he holds significant real estate investment and management positions in Master Plan Communities, Office, Industrial, Retail, Student Housing and Senior Living.</p>
+  <br>
+  <p>Cordone earned his Bachelor of Science in Business Administration with an emphasis in Finance from the Leeds School of Business, University of Colorado in Boulder.</p>
+</div>
+
+<div id="nir" class="white-popup mfp-hide sans">
+  <h2>Nir Goldberg</h2>
+  <!--<h3>Chief Executive Officer</h3>-->
+  <br><br>
+  <p>Goldberg is a Managing Partner of GoldCor Capital Partners, a boutique real estate investment corporation focused solely on the investment in operationally mismanaged value-add multi-family assets. Goldberg has more than 10 years of experience in ownership and management of multi-family communities. He has held leadership roles for more than 30K multi-family units valued over $3B. His expertise is in value-add multi-family operations, investor relations, and multi-family transactions. Goldberg has thorough understanding of and experience in each phase in an asset’s life cycle. He has a broad Asset Management experience spanning from Class A+ luxury lease-ups to Class D value-add apartments.</p>
+  <br>
+  <p>Goldberg earned his Bachelor of Science in Computer Science from the University of Texas at Austin and a Master in Business Administration from the University of North Carolina at Chapel Hill, concentrating in Real Estate and Corporate Finance.</p>
+</div>
+
+<div id="sreenivas" class="white-popup mfp-hide sans">
+  <h2>Sreenivas Tanikella</h2>
+  <!--<h3>Chief Executive Officer</h3>-->
+  <br><br>
+  <p>Tanikella received his M.B.A. from Florida Institute of Technology. He has vast experience establishing strategic relationships with business partners, family offices and ultra-high net worth individuals.</p>
+</div>
+
+
+<!---------- Team Popup ------------> 
+
+<!---------- Subscriber popup form content ------------> 
+<div id="subscribe" class="white-popup mfp-hide sans">
+  <h2>Subscribe Mailing List</h2>
+  <br><br>
+  <form>
+    <div class="v-pad">
+      <input type='text' class="input-style" placeholder="First Name" />
+    </div>
+    <br>
+    <div class="v-pad">
+     <input type='text' class="input-style" placeholder="Last Name" />
+    </div>
+    <br>
+    <div class="v-pad">
+      <input type='email' class="input-style" placeholder="Email Address" />
+    </div>
+    <br><br>
+    <div class="v-pad" style="position:relative;">
+        <label class="code-enabler">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            <p>I understand and consent to the following <a href="terms.html" target="_blank" class="orange-text">Terms & Conditions</a></p>
+        </label>
+      </div>
+    <br><br><br>
+    <!--<button type='submit' value='Submit' class="btn" style="float:right;" onclick="ShowMessage()">Participate</button>-->
+    <div style="float:right;">
+      <a href="#thankyou" class="btn thankyou-popup">Participate</a>
+    </div>
+    <div style="clear:both;"></div>
+  </form>
+</div>
+<div id="thankyou" class="white-popup mfp-hide sans" style="text-align:center;">
+  <h2>Thank you for subscribing with RACE™</h2>
+  <br><br>
+  <button type='submit' value='Submit' class="btn" onclick="reDirect()">OK</button>
+</div>
+<!---------- Subscriber form content end ------------> 
+
+<script>
+function reDirect()
+{
+      window.location.href='index.html';
+}
+
+</script>
+
+<!---------- Proposers & service provider pop form content ------------> 
+<div id="proposers-popup" class="white-popup mfp-hide sans">
+  <h2>Project Proposers</h2>
+  <br><br>
+  <form id="project_proposers" name="project_proposers" action="mail-project-prop.php" method="POST">
+    <div class="v-pad">
+      <p>Please enter your email address</p>
+      <input type='email' class="input-style" placeholder="Your email" name="email" required/>
+    </div>
+    <div class="v-pad">
+        <p>Where is your project located?</p>
+      <input type='text' class="input-style" placeholder="Where is your project located" name="project_location" required/>
+    </div>
+    <div class="v-pad">
+      <p>Is it an existing building or a new development?</p>
+      <select name="development_status" required>
+        <option>Existing building</option>
+        <option>New Development</option>
+      </select>
+    </div>
+    <div class="v-pad">
+       <p>What is the size of your project?</p>
+      <input type='text' class="input-style"  name="project_size" />
+    </div>
+    <div class="v-pad">
+      <p>What is the equity required for your project?</p>
+     <input type='text' class="input-style"  name="equity" required/>
+   </div>
+    <div class="v-pad">
+       <p>What is the debt/loan requirement for your project?</p>
+      <input type='text' class="input-style"  name="loan_requirement" required/>
+    </div>
+    <div class="v-pad">
+      <p>In how many months will your project have positive cashflow</p>
+      <select name="cashflow_months" required>
+        <option>0-3 months</option>
+        <option>3-12 months</option>
+        <option>12-24 months</option>
+        <option>Above 24 months</option>
+      </select>
+    </div>
+    <br><br><br>
+    <div style="float:right;">
+      <button type="submit" class="btn">Register</button>
+    </div>
+    <div style="clear:both;"></div>
+  </form>
+</div>
+<div id="service-popup" class="white-popup mfp-hide sans">
+  <h2>Service Providers</h2>
+  <br><br>
+  <form name="service_provider_form" action="mail-service-provider.php" method="POST" id="service_provider_form">
+    <div class="v-pad">
+      <p>Please enter your email address</p>
+      <input type='email' class="input-style" placeholder="Your email" required name="email"/>
+    </div>
+    <div class="v-pad">
+      <p>Please select service options</p>
+      <select name="service_option" required>
+        <option></option>
+        <option>Accounting</option>
+        <option>Legal</option>
+        <option>Compliance</option>
+        <option>Real Estate Brokerage</option>
+        <option>Custodial Services</option>
+        <option>Title services</option>
+        <option>Valuation service</option>
+        <option>Due dilligence service</option>
+        <option>Real estate audits</option>
+        <option>Investment committee support</option>
+        <option>Market research</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <br><br><br>
+    <div style="float:right;">
+      <button class="btn" type="submit">Register</button>
+    </div>
+    <div style="clear:both;"></div>
+  </form>
+</div>
+<div id="submit" class="white-popup mfp-hide sans" style="text-align:center;">
+  <h3>Thank you for submitting the necessary details.</h3>
+  <p>Our team will get back to you shortly.</p>
+  <br><br>
+  <button type='submit' value='Submit' class="btn" onclick="reDirect()">OK</button>
+</div>
+<!---------- Proposers & service provider form content end ------------> 
+
+<!------------ Legal popup ------------>
+<div id="disclaimer" class="white-popup mfp-hide sans">
+  <h2>Legal Disclaimer</h2>
+  <br><br>
+  <p>This whitepaper describes the initial offering through which the RACE™ Token (RACE™) is to be sold. RACE™ is a crypto token that is
+      designed to be used for all services provided by this RACE™ platform and RACE™’s existing exchange platforms, as explained in this
+      whitepaper. RACE™ can also be used as a crypto token to pay for any other services provided by other business entities. RACE™ will
+      generally not limit the usage of RACE™ or the types of business entities that would like to use RACE™ for their business.</p>
+  <br>
+  <p>RACE™ token is not intended to constitute a security in any jurisdiction.</p>
+  <br>
+  <p>Please note that purchases of RACE™ tokens are final and non-refundable. Individuals, businesses, and other organizations should carefully
+      weigh the risks, costs, and benefits of acquiring RACE™ tokens.</p>
+</div>
+<!------------ Legal popup ------------>
+
+<div id="whitepaper" class="white-popup mfp-hide sans">
+  <div style="padding-top:40px;"></div>
+  <p style="text-align:center;">Thank you for your interest. The whitepaper will be available soon on the website.</p>
+</div>
+
+ 
+
+<!-- Add smooth transition menu --> 
+<script>
+$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		  var target = $(this.hash);
+		  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		  if (target.length) {
+			$('html,body').animate({
+			  scrollTop: target.offset().top
+			}, 1000);
+			return false;
+		  }
+		}
+	  });
+	});
+</script> 
+
+<!-- Add flexslider -->
+<script src="js/jquery.flexslider-min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.flexslider').flexslider({
+            animation: 'slide',
+            controlsContainer: '.flexslider',
+			slideshowSpeed: 3500
+        });
+    });
+	
+</script>
+
+<!-- Add magnifique popup --> 
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.open-popup-link').magnificPopup({
+  type:'inline',
+  midClick: true,
+  mainClass: 'mfp-fade' // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+  
+});
+		
+    });
+
+</script>
+
+<script>
+    $('.participate-popup, .thankyou-popup').magnificPopup({
+      closeBtnInside:true
+    });	
+    $( "#project_proposers" ).submit(function( event ) {
+      event.preventDefault();
+      var form = $('#project_proposers');
+      //console.log('Here');
+      console.log($('#project_proposers').serialize());
+      
+      var url = form.attr('action');
+      $.ajax({
+              type: "POST",
+              url: url,
+              data: $('#project_proposers').serialize(), // serializes the form's elements.
+              success: function(data)
+              {
+                if(data=='success'){
+                  $.magnificPopup.open({
+                    items: {
+                      src: '#submit'
+                    },
+                    type: 'inline'
+                  });
+                }
+                else{
+                  alert(data)
+                }
+                
+              }
+            });
+    });
+    $( "#service_provider_form" ).submit(function( event ) {
+      event.preventDefault();
+      var form = $('#service_provider_form');
+      
+      var url = form.attr('action');
+      $.ajax({
+              type: "POST",
+              url: url,
+              data: form.serialize(), // serializes the form's elements.
+              success: function(data)
+              {
+                if(data=='success'){
+                  $.magnificPopup.open({
+                    items: {
+                      src: '#submit'
+                    },
+                    type: 'inline'
+                  });
+                }
+                else{
+                  alert(data)
+                }
+                
+              }
+            });
+    });
+</script>
+
+<!-- Animate element -->
+<script src="js/wow.js"></script>
+<script>
+new WOW().init();
+</script>
+
+
+
+</body>
+</html>
