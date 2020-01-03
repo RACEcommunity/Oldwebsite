@@ -1199,7 +1199,31 @@ function reDirect()
   <button type='submit' value='Submit' class="btn" onclick="reDirect()">OK</button>
 </div>
 <!---------- Proposers & service provider form content end ------------> 
-
+	
+<!---------- Whitepaper pop form content ------------> 
+<div id="whitepaper" class="white-popup mfp-hide sans">
+  <h2>Whitepaper</h2>
+  <br><br>
+  <form id="whitepaper_email" name="whitepaper_email" action="whitepaper-email.php" method="POST">
+    <div class="v-pad">
+      <p>Please enter your email address</p>
+      <input type='email' class="input-style" placeholder="Your email" name="email" required/>
+    </div>
+    <br><br><br>
+    <div style="float:right;">
+      <button class="btn" type="submit">Submit</button>
+    </div>
+    <div style="clear:both;"></div>
+  </form>
+</div>
+<div id="submit" class="white-popup mfp-hide sans" style="text-align:center;">
+  <h3>Thank you for submitting the necessary details.</h3>
+  <p>Our team will get back to you shortly.</p>
+  <br><br>
+  <button type='submit' value='Submit' class="btn" onclick="reDirect()">OK</button>
+</div>
+<!---------- Whitepaper pop form content end ------------> 
+	
 <!------------ Legal popup ------------>
 <div id="disclaimer" class="white-popup mfp-hide sans">
   <h2>Legal Disclaimer</h2>
@@ -1214,13 +1238,33 @@ function reDirect()
   <p>Please note that purchases of RACE™ tokens are final and non-refundable. Individuals, businesses, and other organizations should carefully
       weigh the risks, costs, and benefits of acquiring RACE™ tokens.</p>
 </div>
-<!------------ Legal popup ------------>
-
+<!------------ Legal popup end ------------>
+	
+	
+<!------------ Whitepaper Popup ----------->
 <div id="whitepaper" class="white-popup mfp-hide sans">
-  <div style="padding-top:40px;"></div>
-  <p style="text-align:center;">Thank you for your interest. Kindly leave your email address here, and we will send you the whitepaper as soon as it is released for public viewing.</p>
+  <h2>Whitepaper</h2>
+  <br><br>
+  <form id="whitepaper_email" name="whitepaper_email" action="whitepaper-email.php" method="POST">
+    <div class="v-pad">
+	<p style="text-align:center;">Thank you for your interest. Kindly leave your email address here, and we will send you the whitepaper as soon as it is released for public viewing.</p>
+      <br>
+	 <input type='email' class="input-style" placeholder="Your email" name="email" required/>
+    </div>
+    <br><br><br>
+    <div style="float:right;">
+      <button class="btn" type="submit">Submit</button>
+    </div>
+    <div style="clear:both;"></div>
+  </form>
 </div>
-
+<div id="submit" class="white-popup mfp-hide sans" style="text-align:center;">
+  <h3>Thank you for submitting the necessary details.</h3>
+  <p>Our team will get back to you shortly.</p>
+  <br><br>
+  <button type='submit' value='Submit' class="btn" onclick="reDirect()">OK</button>
+</div>
+<!------------ Whitepaper Popup end ----------->
  
 
 <!-- Add smooth transition menu --> 
