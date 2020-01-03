@@ -1114,7 +1114,10 @@ function reDirect()
 <!---------- Proposers & service provider pop form content ------------> 
 <div id="proposers-popup" class="white-popup mfp-hide sans">
   <h2>Project Proposers</h2>
-  <br><br>
+  <br>
+<p>If you are a General Partner, Property Owner or Developer who has access to assets/properties and want to be part of our community, please fill out the form below.</p>
+	<br>
+	<br>
   <form id="project_proposers" name="project_proposers" action="mail-project-prop.php" method="POST">
     <div class="v-pad">
       <p>Please enter your email address</p>
@@ -1124,6 +1127,7 @@ function reDirect()
         <p>Where is your project located?</p>
       <input type='text' class="input-style" placeholder="Where is your project located" name="project_location" required/>
     </div>
+<!---- 
     <div class="v-pad">
       <p>Is it an existing building or a new development?</p>
       <select name="development_status" required>
@@ -1152,16 +1156,19 @@ function reDirect()
         <option>Above 24 months</option>
       </select>
     </div>
+--->
     <br><br><br>
     <div style="float:right;">
-      <button type="submit" class="btn">Register</button>
+      <button type="submit" class="btn">Submit</button>
     </div>
     <div style="clear:both;"></div>
   </form>
 </div>
 <div id="service-popup" class="white-popup mfp-hide sans">
   <h2>Service Providers</h2>
-  <br><br>
+  <br>
+	<p>If you are providing any of the services below and want to enhance your career, become part of our community by filling out the form below</p>
+<br><br>
   <form name="service_provider_form" action="mail-service-provider.php" method="POST" id="service_provider_form">
     <div class="v-pad">
       <p>Please enter your email address</p>
