@@ -12,23 +12,18 @@ if(isset($_POST['email'])) {
  
  
     // validation expected data exists
-    if(empty($_POST['project_location']) ||
-        empty($_POST['development_status']) ||
-        empty($_POST['project_size']) ||
-        empty($_POST['equity']) ||
-        empty($_POST['loan_requirement']) ||
-        empty($_POST['cashflow_months'])) {
+    if(empty($_POST['project_location'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
     }
  
      
  
     $project_location = $_POST['project_location']; // required
-    $development_status = $_POST['development_status']; // required
-    $project_size = $_POST['project_size']; // required
-    $equity = $_POST['equity']; // not required
-    $loan_requirement = $_POST['loan_requirement']; // required
-    $cashflow_months = $_POST['cashflow_months']; // required
+    // $development_status = $_POST['development_status']; // required
+    // $project_size = $_POST['project_size']; // required
+    // $equity = $_POST['equity']; // not required
+    // $loan_requirement = $_POST['loan_requirement']; // required
+    // $cashflow_months = $_POST['cashflow_months']; // required
     $email_from = $_POST['email']; // required
  
     $error_message = "";
@@ -53,11 +48,11 @@ if(isset($_POST['email'])) {
  
     $email_message .= "Email: ".clean_string($email_from)."\n";
     $email_message .= "Where is your project located?: ".clean_string($project_location)."\n";
-    $email_message .= "Is it an existing building or a new development: ".clean_string($development_status)."\n";
-    $email_message .= "What is the size of your project: ".clean_string($project_size)."\n";
-    $email_message .= "What is the equity required for your project?: ".clean_string($equity)."\n";
-    $email_message .= "What is the debt/loan requirement for your project?: ".clean_string($loan_requirement)."\n";
-    $email_message .= "In how many months will your project have positive cashflow?: ".clean_string($cashflow_months)."\n";
+    // $email_message .= "Is it an existing building or a new development: ".clean_string($development_status)."\n";
+    // $email_message .= "What is the size of your project: ".clean_string($project_size)."\n";
+    // $email_message .= "What is the equity required for your project?: ".clean_string($equity)."\n";
+    // $email_message .= "What is the debt/loan requirement for your project?: ".clean_string($loan_requirement)."\n";
+    // $email_message .= "In how many months will your project have positive cashflow?: ".clean_string($cashflow_months)."\n";
  
 // create email headers
 $headers = 'From: '.$email_from."\r\n".
